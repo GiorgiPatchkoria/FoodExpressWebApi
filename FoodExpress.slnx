@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="FoodExpress.Core/FoodExpress.Core.csproj" />
+  <Project Path="FoodExpress.Infrastructure/FoodExpress.Infrastructure.csproj" />
+  <Project Path="FoodExpress.Services/FoodExpress.Services.csproj" />
+  <Project Path="FoodExpress.Tests/FoodExpress.Tests.csproj" />
+  <Project Path="FoodExpress/FoodExpress.Web.csproj" />
+</Solution>
