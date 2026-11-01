@@ -1,4 +1,9 @@
 
+using FoodExpress.Core.Interfaces;
+using FoodExpress.Infrastructure;
+using FoodExpress.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace FoodExpress
 {
     public class Program
@@ -13,6 +18,12 @@ namespace FoodExpress
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
 
+            builder.Services.AddDbContext<FoodDbContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+            builder.Services.AddSwaggerGen();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -20,6 +31,9 @@ namespace FoodExpress
             {
                 app.MapOpenApi();
             }
+
+            app.UseSwagger();
+            app.UseSwaggerUI();
 
             app.UseHttpsRedirection();
 
