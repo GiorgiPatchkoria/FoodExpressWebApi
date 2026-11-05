@@ -51,7 +51,7 @@ namespace FoodExpress.Controllers
         /// Changes the current user's password.
         /// </summary>
         /// <param name="dto">The current password and new password.</param>
-        [HttpPost("me/change-password")]
+        [HttpPut("me/change-password")]
         public async Task<IActionResult> ChangePassword(ChangePasswordDTO dto, CancellationToken ct)
         {
             await _service.ChangePasswordAsync(_current.UserId, dto, ct);
