@@ -1,4 +1,4 @@
-﻿namespace FoodExpress.Core.Interfaces
+namespace FoodExpress.Core.Interfaces
 {
     public interface IUnitOfWork
     {

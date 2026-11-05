@@ -1,4 +1,4 @@
-﻿using FoodExpress.Core.Interfaces;
+using FoodExpress.Core.Interfaces;
 using FoodExpress.Infrastructure.Data;
 
 namespace FoodExpress.Infrastructure
