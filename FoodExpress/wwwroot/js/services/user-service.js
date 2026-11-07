@@ -5,7 +5,7 @@ export const users = {
         return api.put('/users/me', body, { auth: true });
     },
     changePassword(body) {
-        return api.post('/users/me/change-password', body, { auth: true });
+        return api.put('/users/me/change-password', body, { auth: true });
     },
     forgotPassword(email) {
         return api.post('/auth/forgot-password', { email });
